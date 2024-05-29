@@ -1,5 +1,6 @@
-# How to
----
+![Shoparser screenshot](./Shoparser.png?raw=true "It worked")
+
+# How to:
 
 ## 1 Clone this repo
 ```bash
