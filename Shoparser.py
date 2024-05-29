@@ -26,12 +26,12 @@ def main():
             versions.append(version)
         
         click.echo("Доступные версии:")
-        for i, version in enumerate(versions):
+        for i, version in enumerate(reversed(versions)):
             click.echo(f"{i + 1}. Версия {version}")
 
         choice = click.prompt("Выберите версию для скачивания", type=int, default=1, show_default=True)
 
-        chosen_version = versions[choice - 1]
+        chosen_version = versions[-choice]
 
         for content in root.findall('ns:Contents', namespace):
             key = content.find('ns:Key', namespace).text
